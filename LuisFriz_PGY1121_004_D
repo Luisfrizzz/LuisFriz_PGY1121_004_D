@@ -1,0 +1,104 @@
+print("Bienvenido a Creativos.cl")
+print("-------------------------------------------------")
+print("Sala de ventas de entradas para Michael Jam")
+print("-------------------------------------------------")
+menu = 0
+tipoasiento = 0
+tipoentrada = 0
+ComprarEntradas = 0
+entradas = 0
+asiento = 0
+Platinium=120000
+Gold=80000
+Silver=50000
+totalP=0
+totalG=0
+totalS=0
+TOTAL=0
+
+list1=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+    11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+list2=[21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+    31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+    41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
+list3=[51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
+    61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
+    71, 22, 73, 74, 75, 76, 77, 78, 79, 80,
+    81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
+    91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+listasistentes=[]
+while menu>1 or menu<5:
+    print("1. Comprar entradas")
+    print("2. Mostrar ubicaciones disponibles")
+    print("3. Ver listado de asistentes")
+    print("4. Mostrar ganancias totales")
+    print("5. Salir")
+    opcion=int(input("seleccione una opcion: "))
+
+    if opcion == 1:
+        print("Ubicaciones disponibles")
+        print(list1)
+        print(list2)
+        print(list3)
+        print("Selecione una opcion")
+        print("-------------------------------------------------")
+        while tipoasiento>1 or tipoasiento<3:
+            print("-------------------------------------------------")
+            print("1. Platinium $120.000 (asientos del 1 al 20)")
+            print("2. Gold $80.000 (asientos del 21 al 50)")
+            print("3. Silver $50.000 (asientos del 51 al 100)")
+            print("4. Ir a pagar entradas")
+            tipoasiento=int(input("seleccione una opcion: "))
+            if tipoasiento==1:
+                print(list1)
+                asiento=int(input("Indique el asiento que desea: "))
+                cantidad=int(input("Indique su cantidad, maximo 3 entradas: "))
+                totalP=cantidad*Platinium
+                print("su total es: ", totalP)
+            elif tipoasiento==2:
+                print(list2)
+                asiento=int(input("Indique el asiento que desea: "))
+                cantidad=int(input("Indique su cantidad, maximo 3 entradas: "))
+                totalG=cantidad*Gold
+                print("su total es: ", totalG)
+            elif tipoasiento==3:
+                print(list3)
+                asiento=int(input("Indique el asiento que desea : "))
+                cantidad=int(input("Indique su cantidad, maximo 3 entradas: "))
+                totals=cantidad*Silver
+                print("su total es: ", totalS)
+            elif tipoasiento==4:
+                print("-------------------------------------------------")
+                print("ValorEntrada Platinium: ", totalP)
+                print("Valor entrada Gold: ", totalG)
+                print("Valor entradas Silver: ", totalS)
+                TOTAL=totalG+totalP+totalS
+                print("Su total a pagar es: ", TOTAL)
+    if opcion == 2:
+        print("Ubicaciones disponibles")
+        print("-------------------------------------------------")
+        print("Platinium")
+        print(list1)
+        print("-------------------------------------------------")
+        print("Gold")
+        print(list2)
+        print("-------------------------------------------------")
+        print("Silver")
+        print(list3)
+        print("-------------------------------------------------")
+    if opcion == 3:
+        print("Lista de asistentes")
+        print(listasistentes)
+    if opcion == 4:
+        print("Ganancias totales")
+        print("-------------------------------------------------")
+        print("ValorEntrada Platinium: ", totalP)
+        print("Valor entrada Gold: ", totalG)
+        print("Valor entradas Silver: ", totalS)
+        TOTAL=totalG+totalP+totalS
+        print("Su total a pagar es: ", TOTAL)
+    if opcion == 5:
+        print("Luis Friz, 13/03/2023")
+        break
+    else:
+        print("Opcion no valida")
